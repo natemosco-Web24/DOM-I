@@ -49,6 +49,8 @@ let NavText = document.querySelectorAll("a");
 // NavText[4].textContent = siteContent["nav"]["nav-item-5"];
 // NavText[5].textContent = siteContent["nav"]["nav-item-6"];
 NavText.forEach((link, index) => link.textContent = Object.values(siteContent.nav)[index])
+// BELOW IS THE WAY TO DO THIS WHEN TARGETING KEYS INSTEAD OF VALUES (MORE CONVOLUTED)
+// NavText.forEach((link, index) => link.textContent = siteContent.nav[(Object.keys(siteContent.nav)[index])])
 
 // let header1 = document.querySelector(".cta-text");
 let header1 = document.getElementsByTagName("h1");
