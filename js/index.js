@@ -54,7 +54,9 @@ NavText.forEach((link, index) => link.textContent = Object.values(siteContent.na
 
 // let header1 = document.querySelector(".cta-text");
 let header1 = document.getElementsByTagName("h1");
-header1[0].textContent = siteContent["cta"]["h1"];
+//ONE WAY TO INTRODUCE LINE BREAK USING \n 
+header1[0].style.whiteSpace = "pre";
+header1[0].textContent = "Dom\n Is\n Awesome";
 console.log("header1", header1)
 let ctaimage = document.querySelector("#cta-img")
 ctaimage.setAttribute("src", siteContent["cta"]["img-src"])
@@ -77,6 +79,7 @@ allp[1].textContent = siteContent["main-content"]["about-content"]
 allp[2].textContent = siteContent["main-content"]["services-content"]
 allp[3].textContent = siteContent["main-content"]["product-content"]
 allp[4].textContent = siteContent["main-content"]["vision-content"]
+//ANOTHER WAY TO INTRODUCE LINE BREAK WHILE USING THE DATA PROVIDED NOTE USE OF INNER HTML FOR THIS TO WORK HERE
 allp[5].innerHTML = (siteContent["contact"]["address"].slice(0, 18) + "<br>" + siteContent["contact"]["address"].slice(-14))
 // allp[5].textContent = siteContent["contact"]["address"]
 allp[6].textContent = siteContent["contact"]["phone"]
